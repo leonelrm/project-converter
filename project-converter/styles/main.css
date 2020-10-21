@@ -1,0 +1,31 @@
+body{
+    font-family: 'EB Garamond', serif;
+    font-size: 1.3em;
+}
+h1#titre{
+    color: rgb(20, 148, 165);
+    border-left: 10px solid rgb(20, 148, 165);
+    border-right: 10px solid rgb(20, 148, 165);
+    font-size: 4em;
+    font-weight: bolder;
+    font-family: 'EB Garamond', serif;
+}
+div#button{
+    display: flex;
+    justify-content: space-between;
+   
+
+}
+button#btn1{
+    margin-right: 200px;    
+}
+button#btn2{
+    margin-left: 200px;    
+}
+h2{
+    font-family: 'EB Garamond', serif;
+    font-size: 2.5em ;
+}
+label.w3-text-blue{
+    font-size: 1.3em;
+}

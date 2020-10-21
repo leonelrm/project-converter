@@ -3,7 +3,7 @@
 <head>
 
 	<meta charset="UTF-8">
-	<title>Monuments de Paris</title>
+	<title>Project Converter</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<!--Ajout de Bootstrap à partir du CDN-->
@@ -22,28 +22,18 @@
 	<!--Pour utiliser les icônes Font Awesome avec Bootstrap 4 -->
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 
+	<link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
+
 	<!--Fichier CSS de la page-->
-    <link rel="stylesheet" href="../../css/main.css" />
+    <link rel="stylesheet" href="styles/main.css" />
 	<?php
-		session_start();
-		if ( isset($_SESSION['msg_erreur']) ) {
-			if ($_SESSION['msg_erreur'] == "") {
-				$email = "";
-				$mdp = "";
-			} else {
-				$email = $_SESSION['email'];
-				$mdp = $_SESSION['mdp'];
-			}
-		} else {
-			$email = "";
-			$mdp = "";
-			$_SESSION['msg_erreur'] = "";
-		}
+	session_start();
+	
 	?>
 </head>
 <body>
-	<div class="w3-container w3-black">
-		<h1>Project Converter</h1>
+	<div class="w3-container w3-white w3-center">
+		<h1 id="titre">Project Converter</h1>
 	</div>
 	<br>
 
@@ -52,21 +42,26 @@
 		&nbsp;
 		</div>
 		<div class="w3-half w3-light-grey w3-border w3-card-4">
-			<div class="w3-container w3-blue">
+			<div class="w3-container w3-blue w3-center">
 				<h2>Login Form</h2>
 			</div>
 			<br><br>
-			<form class="w3-container" action="../../controllers/utilisateur/LoginAccept.php" method="post">
-				<p class="w3-text-red"><?php echo $_SESSION['msg_erreur'];?> </p>
+			<form class="w3-container" action="" method="post">
 				<br>
 				<label>Email</label>
-				<input class="w3-input w3-text-blue" type="email" name="email" value="<?php echo $email; ?>" autofocus>
+				<input class="w3-input w3-text-blue" type="email" name="email" placeholder="Entrez Votre identifiant" autofocus>
 				<label>Mot de passe</label>
-				<input class="w3-input w3-text-blue" type="password" name="mdp" value="<?php echo $mdp; ?>" >
+				<input class="w3-input w3-text-blue" type="password" name="mdp" placeholder="Entrez votre mot de passe" value="" >
 				<br>
-				<button type="submit" class="w3-btn w3-teal w3-round-large w3-hover-green w3-medium"><i class="fa fa-check" ></i>&nbsp;&nbsp; Se connecter</button>
+				<div id="button">
+				<a href="converter.php"><button id="btn1" type="submit" class="w3-btn w3-teal w3-round-large w3-hover-green w3-medium">&nbsp;&nbsp; Valider</button></a>
+				
+				<a href="login.php"><button id="btn2" type="submit"  name="reset"  value="reset" class="w3-btn w3-black w3-round-large w3-hover-green w3-medium">&nbsp;&nbsp; Reset</button></a>
 				<br><br>
+				</div>
+
 			</form>
+
 		</div>
 		<div class="w3-quarter w3-container">
 		&nbsp;
