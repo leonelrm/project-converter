@@ -7,7 +7,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<!--Ajout de Bootstrap à partir du CDN-->
-	<link rel="stylesheet" href="css/bootstrap.min.css" >
+	<link rel="stylesheet" href="public/css/bootstrap.min.css" >
 	
 
 	<!--Ajout de W3.CSS à partir du CDN-->
